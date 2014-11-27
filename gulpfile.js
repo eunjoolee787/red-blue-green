@@ -2,23 +2,15 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 
 gulp.task('styles', function (){
-  return gulp.src('./sass/*.scss')
+  return gulp.src('./scss/*.scss')
   .pipe(sass())
   .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch_styles', function (){
-  gulp.watch('./sass/**/*.scss', ['styles']);
-  gulp.watch('*.html', notifyLiveReload);
-  gulp.watch('css/*.css', notifyLiveReload);
+  gulp.watch('./scss/**/*.scss', ['styles']);
+  gulp.watch('./css/*.css');
 });
 
-gulp.task('express', function(){
-  var express = require('express');
-  var app = express();
-  app.use(require('connect-livereload')({port: 35729}));
-  app.use(express.static(__dirname));
-  app.listen(4000);
-});
 
-gulp.task('default', ['watch_styles']);
+gulp.task('default', ['styles', 'watch_styles']);
