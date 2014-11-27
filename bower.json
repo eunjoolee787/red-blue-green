@@ -1,0 +1,25 @@
+{
+  "name": "y",
+  "version": "y",
+  "authors": [
+    "y"
+  ],
+  "description": "y",
+  "main": "y",
+  "keywords": [
+    "y"
+  ],
+  "license": "y",
+  "homepage": "y",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.4.7"
+  }
+}
